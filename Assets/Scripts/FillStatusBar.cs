@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class FillStatusBar : MonoBehaviour
 {
     public Health health;
     public Image fillImage;
-    private Slider slider;
+    public Slider slider;
 
 
     void Awake()
     {
-        slider = GetComponent<slider>();
+        slider.maxValue = 1000f;
+        //slider = GetComponent<slider>();
+        slider.value = slider.maxValue;
     }
 
     // Update is called once per frame
@@ -28,6 +32,12 @@ public class FillStatusBar : MonoBehaviour
             fillImage.enabled = true;
         }
 
+        if (slider.value <= 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
+
+        /*
         float fillValue = health.currentHealth / health.maxHealth;
 
         if (fillValue <= slider.maxValue / 3)
@@ -39,5 +49,6 @@ public class FillStatusBar : MonoBehaviour
             fillImage.color = Color.red;
         }
         slider.value = fillValue;
+        */
     }
 }
