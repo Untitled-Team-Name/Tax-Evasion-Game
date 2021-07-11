@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level2.unity
     guid: 45c538c9c186e21468916ad39d4c6314
   - enabled: 1
+    path: Assets/Scenes/Levels/EnemyTest2.unity
+    guid: 99875935bbb643e478985de60c569b16
+  - enabled: 1
     path: Assets/Scenes/Levels/MainMenu.unity
     guid: 3be8e95a29243124fb95a01ea6f1c02b
   - enabled: 1

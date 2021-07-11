@@ -6,12 +6,20 @@ using UnityEngine.SceneManagement;
 public class LoseScreen : MonoBehaviour
 {
 
+    // String name of scene to load
+    public string sceneToStartOver;
+
+    // String name of scene to load
+    public string sceneToMainMenu;
+
+    // Scene for exit to main menu
     public void ExitButton() {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(sceneToMainMenu);
     }
 
+    // Scene for starting over
     public void StartOver() {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(sceneToStartOver);
     }
 
 }

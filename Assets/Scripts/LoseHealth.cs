@@ -7,12 +7,14 @@ using System;
 public class LoseHealth : MonoBehaviour
 {
 
+    public GameObject pauseMenu;
     public Slider slider;
     public Text moneyText;
 
     // Start is called before the first frame update
     void Start()
     {
+
         //Math.Round(slider.value, 2);
         moneyText.text = "$ " + (Math.Round(slider.value, 2)).ToString();
     }
