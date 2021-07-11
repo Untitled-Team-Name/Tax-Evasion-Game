@@ -7,12 +7,14 @@ public class FillStatusBar : MonoBehaviour
 {
     public Health health;
     public Image fillImage;
-    private Slider slider;
+    public Slider slider;
 
 
     void Awake()
     {
-        slider = GetComponent<slider>();
+        slider.maxValue = 1000f;
+        //slider = GetComponent<slider>();
+        slider.value = slider.maxValue;
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class FillStatusBar : MonoBehaviour
             fillImage.enabled = true;
         }
 
+        /*
         float fillValue = health.currentHealth / health.maxHealth;
 
         if (fillValue <= slider.maxValue / 3)
@@ -39,5 +42,6 @@ public class FillStatusBar : MonoBehaviour
             fillImage.color = Color.red;
         }
         slider.value = fillValue;
+        */
     }
 }
